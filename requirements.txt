@@ -1,0 +1,36 @@
+# ======================================================================
+# requirements.txt  —  Food Preference Siamese Network (PyTorch)
+# Windows + RTX 4060 (CUDA 11.8)
+# ======================================================================
+# STEP 1: Create and activate venv
+#   python -m venv pt_env
+#   pt_env\Scripts\activate
+#
+# STEP 2: Install PyTorch WITH CUDA first (must be separate from pip install)
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+#
+# STEP 3: Install the rest
+#   pip install -r requirements.txt
+#
+# VERIFY GPU works:
+#   python -c "import torch; print(torch.cuda.is_available())"  # must print True
+# ======================================================================
+
+# Core ML
+timm==0.9.12                # EfficientNet and other backbones (torchvision equivalent)
+scikit-learn==1.4.2         # StratifiedKFold, metrics
+
+# Data / Image
+numpy==1.26.4
+pandas==2.2.2
+opencv-python==4.9.0.80
+Pillow==10.3.0
+
+# Training utilities
+tqdm==4.66.4                # progress bars
+
+# Plotting
+matplotlib==3.9.0
+
+# Misc
+albumentations==1.4.8       # image augmentation (optional but recommended)
